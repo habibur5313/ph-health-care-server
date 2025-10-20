@@ -5,6 +5,9 @@ import { SpecialtiesRoutes } from '../modules/specialties/specialties.routes';
 import { DoctorRoutes } from '../modules/doctor/doctor.routes';
 import { ScheduleRoutes } from '../modules/schedule/schedule.routes';
 import { doctorScheduleRoutes } from '../modules/doctorSchedule/doctorSchedule.routes';
+import { AdminRoutes } from '../modules/admin/admin.routes';
+import { PatientRoutes } from '../modules/patient/patient.routes';
+import { AppointmentRoutes } from '../modules/appointment/appointment.routes';
 
 
 const router = express.Router();
@@ -18,6 +21,18 @@ const moduleRoutes = [
         path: '/auth',
         route: authRoutes
     },
+     {
+        path: '/admin',
+        route: AdminRoutes
+    },
+    {
+        path: '/patient',
+        route: PatientRoutes
+    },
+    {
+        path: '/doctor',
+        route: DoctorRoutes
+    },
     {
         path: '/specialties',
         route: SpecialtiesRoutes
@@ -27,12 +42,12 @@ const moduleRoutes = [
         route: ScheduleRoutes
     },
     {
-        path: '/doctor',
-        route: DoctorRoutes
-    },
-    {
         path: '/doctor-schedule',
         route: doctorScheduleRoutes
+    },
+    {
+        path: '/appointment',
+        route: AppointmentRoutes
     },
 ];
 
